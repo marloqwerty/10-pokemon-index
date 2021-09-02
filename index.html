@@ -1,0 +1,124 @@
+<!-- 
+    C
+    O
+    N
+    G
+    R
+    A
+    T
+    S
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeDex 1.3</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1>PokeDex</h1>
+        <button onclick="pokedex.openMobileNavBar()">
+            <span class="material-icons">
+                menu
+            </span>
+        </button>
+    </header>
+
+    <nav class="button-container">
+        <!-- <button class="type all">all</button>
+        <button class="type electric">electric</button>
+        <button class="type fire">fire</button>
+        <button class="type water">water</button>
+        <button class="type grass">grass</button>
+        <button class="type psychic">psychic</button>
+        <button class="type poison">poison</button>
+        <button class="type fighting">fighting</button>
+        <button class="type normal">normal</button>
+        <button class="type fairy">fairy</button>
+        <button class="type bug">bug</button>
+        <button class="type rock">rock</button>
+        <button class="type steel">steel</button>
+        <button class="type ice">ice</button> -->
+        <ul>
+            <li class="type all">all</li>
+            <li class="type electric">electric</;>
+            <li class="type fire">fire</li>
+            <li class="type water">water</li>
+            <li class="type grass">grass</li>
+            <li class="type psychic">psychic</button>
+            <li class="type poison">poison</li>
+            <li class="type fighting">fighting</button>
+            <li class="type normal">normal</button>
+            <li class="type fairy">fairy</li>
+            <li class="type bug">bug</li>
+            <li class="type rock">rock</li>
+            <li class="type steel">steel</li>
+            <li class="type ice">ice</li>
+        </ul>
+    </nav>
+
+    <section class="index" id="index">
+
+        <!-- <div class="app-body"> -->
+
+        <div class="pokemon-container">
+        </div>
+        <!-- </div> -->
+    </section>
+    <section id="myModal" class="modal">
+
+
+
+        <div class="modal-content" id="modal-content">
+
+        </div>
+
+    </section>
+
+    <div id="loadingImage">
+
+        <div class="container">
+            <div class="bloom"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <script>
+        
+        let container = document.querySelector(".pokemon-container");
+        container.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            const lengthOfTheScreen = container.height;
+            header.classList.toggle("sticky", container.scrollY > lengthOfTheScreen / 2);
+        });
+
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+    </script>
+
+
+</body>
+
+</html>
